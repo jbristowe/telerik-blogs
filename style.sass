@@ -1,0 +1,287 @@
+@charset "utf-8"
+
+$white: #ffffff
+$black: #000000
+$blue: #0181ca
+$light-blue: #e6f5ff
+$green: #27c106
+$light-green: #ebffeb
+$grey: #646464
+$light-grey: #f7f7f7
+$default-padding: 20px
+$default-margin: 20px
+
+code
+  background: $light-grey
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif
+  line-height: 1.25
+  font-size: .8em
+    
+pre[class*=language-]
+  margin: 30px 0
+
+.black-text
+  color: $black !important
+
+.top-border
+  margin-top: 100px
+  position: relative
+
+.top-border:before
+  border-top: 3px solid $blue
+  content: ''
+  display: block
+  position: absolute
+  top: -50px
+  width: 100%
+  left: 0
+
+// question and answer
+  
+.tk-question-and-answer
+  background: $light-blue
+  border-radius: 2px
+  margin-bottom: 30px
+
+.tk-question
+  background-color: $blue
+  border-top-left-radius: 2px
+  border-top-right-radius: 2px
+  color: $white
+  font-weight: bold
+  padding: 10px
+
+.tk-answer
+  color: $black
+  padding: 10px
+
+// highlight blocks  
+
+%tk-highlight
+  border-left-width: 8px
+  border-left-style: solid
+  border-radius: 2px
+  color: $black
+  padding: $default-padding
+  
+.tk-green-highlight
+  @extend %tk-highlight
+  background-color: $light-green
+  border-left-color: $green
+  color: $green
+
+.tk-blue-highlight
+  @extend %tk-highlight
+  background-color: $light-blue
+  border-left-color: $blue
+  color: $blue
+
+.tk-grey-highlight
+  @extend %tk-highlight
+  background-color: $light-grey
+  border-left-color: $grey
+  color: $grey
+
+// backgrounds
+  
+.tk-black-background
+  background-color: $black
+
+.tk-white-background
+  background-color: $white
+
+.tk-green-background
+  background-color: $green
+
+.tk-light-green-background
+  background-color: $light-green
+
+.tk-blue-background
+  background-color: $blue
+
+.tk-light-blue-background
+  background-color: $light-blue
+  
+.tk-grey-background
+  background-color: $grey
+
+.tk-light-grey-background
+  background-color: $light-grey
+
+// borders
+  
+.tk-green-border
+  border-color: $green
+  
+.tk-blue-border
+  border-color: $blue
+  
+// html elements
+  
+blockquote
+  background: $light-blue
+  border-left: 8px solid $blue
+  border-radius: 2px
+  color: $black
+  margin: $default-margin auto
+  padding: $default-padding
+  overflow: auto
+
+blockquote > *:last-child,
+.tk-blue-highlight > *:last-child,
+.tk-green-highlight > *:last-child,
+.tk-grey-highlight > *:last-child,
+.tk-answer > *:last-child,
+  padding-bottom: 0px
+  margin-bottom: 0px
+  
+.editor-note
+  margin-top: 0px
+
+.blockquote-image
+  float: right !important
+  padding-left: $default-padding
+  padding-bottom: $default-padding
+  max-width: 30%
+
+.about-quote
+  font-size: .7em
+
+blockquote span
+  color: $black
+  display: block
+  font-style: normal
+  font-weight: bold
+  margin-top: 1em
+
+// tables
+  
+.tk-table
+  margin-bottom: 30px
+  width: 100%
+
+%tk-table-defaults
+  border: 1px solid $light-grey
+  color: $black
+  padding: 8px
+
+.tk-table
+  td
+    @extend %tk-table-defaults
+
+.tk-table
+  th
+    @extend %tk-table-defaults
+    padding-top: 12px
+    padding-bottom: 12px
+    text-align: left
+
+.tk-table-alt-rows
+  tr:nth-child(even)
+    background-color: $light-grey
+
+.tk-blue-headers
+  th
+    background-color: $blue
+    color: $white
+
+.tk-blue-first-column
+  td:first-child
+    background-color: $blue
+    color: $white
+    font-weight: bold
+    
+.tk-green-headers
+  th
+    background-color: $green
+    color: $white
+    
+.tk-grey-headers
+  th
+    background-color: $grey
+    color: $white
+
+details
+  margin-bottom: $default-margin + 20px
+
+kbd
+  display: inline-block
+  margin: 0 .1em
+  padding: .1em .6em
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+  font-size: .7em
+  line-height: 1.4
+  color: $black
+  text-shadow: 0 1px 0 #FFF
+  background-color: $light-grey
+  border: 1px solid #adb3b9
+  border-radius: 3px
+  box-shadow: 0 1px 0 rgba(12, 13, 14, .2), 0 0 0 2px #FFF inset
+  white-space: nowrap
+
+.tk-animated-image
+  max-width: 30% !important
+  display: block
+  margin-left: auto
+  margin-right: auto
+  
+%tk-featured-image
+  max-width: 30% !important
+  margin-bottom: $default-margin !important
+
+.tk-featured-image-centered
+  @extend %tk-featured-image
+  
+.tk-featured-image-right
+  @extend %tk-featured-image
+  float: right !important
+  margin-left: $default-margin !important
+
+.tk-featured-image-left
+  @extend %tk-featured-image
+  float: left !important
+  margin-right: $default-margin !important
+
+// embed from Twitter
+
+.twitter-tweet
+  margin-bottom: 30px
+
+// StackBlitz
+
+.tk-stackblitz
+  height: 600px
+  margin-bottom: 30px
+  width: 100%
+  
+// Alyssa's styles
+  
+@media screen and (min-width: 914px)
+  body
+    width: 100% !important
+    margin: 0 auto
+
+.container
+  padding-right: 0 !important
+  padding-left: 0 !important
+
+
+.blockquote-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.blockquote-wrapper img
+  max-width: 270px !important
+  margin-right: 30px
+
+.blockquote-sub-text
+  font-size: 14px !important
+  text-decoration: italic
+  margin-top: 0
+  padding-top: 0
+
+// iframe
+
+iframe
+  margin-bottom: 30px
