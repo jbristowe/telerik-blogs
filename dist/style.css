@@ -230,18 +230,23 @@ kbd {
 }
 
 .tk-featured-image-centered, .tk-featured-image-right, .tk-featured-image-left {
-  max-width: 30% !important;
   margin-bottom: 20px !important;
+}
+
+.tk-featured-image-centered {
+  max-width: 50% !important;
 }
 
 .tk-featured-image-right {
   float: right !important;
   margin-left: 20px !important;
+  max-width: 30% !important;
 }
 
 .tk-featured-image-left {
   float: left !important;
   margin-right: 20px !important;
+  max-width: 30% !important;
 }
 
 .twitter-tweet {
